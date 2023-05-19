@@ -20,7 +20,7 @@
           </button>
           <br>
           <p v-show="luas">Luas Lingkaran : <strong>{{ luas }}</strong></p>
-          <p v-show="luas">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
+          <p v-show="keliling">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
           <br>
           <br>
           <a href="/db.json"
