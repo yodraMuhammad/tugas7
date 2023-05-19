@@ -1,0 +1,46 @@
+[{
+    "id": 1,
+    "nama": "Asus A4",
+    "deskriksi": "Rilis Tahun 2018",
+    "stok": 10,
+    "harga": 14000,
+    "discont": 0.1,
+    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//85/MTA-2143560/asus_asus-x441ba-ga602t--amd-a6-9220-4gb-1tb-radeon-r4-w10-silver-14inch_full03.jpg",
+    "detail": {
+      "komentars": [
+        {
+          "nama": "Akbar",
+          "komentar": "Produk sangat bagus",
+          "tanggal": "2023-05-19"
+        },
+        {
+          "nama": "Rizky",
+          "komentar": "Produk kurang bagus",
+          "tanggal": "2023-05-25"
+        }
+      ],
+      "rating": 5.0,
+      "terjual": 20
+    }
+  },
+  {
+    "id": 2,
+    "nama": "Iphone 12",
+    "deskriksi": "Rilis Tahun 2018",
+    "stok": 10,
+    "harga": 14000,
+    "discont": 0.1,
+    "image": "https://cdn.eraspace.com/media/catalog/product/i/p/iphone_12_pro_pacific_blue_1_3.jpg",
+    "detail": {
+      "komentars": [
+        {
+          "nama": "Akbar",
+          "komentar": "Produk sangat bagus",
+          "tanggal": "2022-05-19"
+        }
+      ],
+      "rating": 5.0,
+      "terjual": 20
+    }
+  }
+]
