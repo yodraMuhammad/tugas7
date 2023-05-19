@@ -101,16 +101,11 @@ console.log(product);
             </tbody>
           </table>
           <div class="mt-3" v-for="data in product.detail.komentars" :key="data.id">
-            <div
-              class="border rounded-xl border-gray-400 p-4 flex flex-col justify-between leading-normal"
-            >
-              
+            <div class="border rounded-xl border-gray-400 p-4 flex flex-col justify-between leading-normal">
+
               <div class="flex items-center">
-                <img
-                  class="w-10 h-10 rounded-full mr-4"
-                  src="https://v1.tailwindcss.com/img/jonathan.jpg"
-                  alt="Avatar of Jonathan Reinink"
-                />
+                <img class="w-10 h-10 rounded-full mr-4" src="https://v1.tailwindcss.com/img/jonathan.jpg"
+                  alt="Avatar of Jonathan Reinink" />
                 <div class="text-sm">
                   <p class="text-gray-900 leading-none">{{ data.nama }}</p>
                   <p class="text-gray-600">{{ data.tanggal }}</p>
@@ -118,7 +113,7 @@ console.log(product);
               </div>
               <div class="mb-8 mt-4">
                 <p class="text-gray-700 text-base">
-                    {{ data.komentar }}
+                  {{ data.komentar }}
                 </p>
               </div>
             </div>
