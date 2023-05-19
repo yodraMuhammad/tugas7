@@ -37,6 +37,11 @@
   <section id="card" class="mb-30 pb-35">
     <div class="container">
       <hr class="mb-10">
+      <div class="flex justify-center items-center">
+        <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md ml-2 mb-6" @click="rev">
+          Reverse
+        </button>
+      </div>
       <div class="flex flex-wrap">
         <div class="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/1 mb-10" v-for="data in datas.products" :key="data.id">
           <nuxt-link :to="'/tugas/detail/' + data.id">
@@ -116,6 +121,9 @@ export default {
     hitung(jari) {
       this.luas = (pi * jari * jari).toFixed(2)
       this.keliling = (2 * pi * jari).toFixed(2)
+    },
+    rev(){
+      this.datas.products.reverse()
     }
   },
 };
