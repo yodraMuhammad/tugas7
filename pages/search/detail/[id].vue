@@ -19,12 +19,6 @@ console.log(data._rawValue)
         <div class="md:w-2/3">
           <h1 class="text-4xl mb-6">{{ film.Title }}</h1>
           <table class="border-collapse">
-            <!-- <thead>
-              <tr>
-                <th class="p-2">Kolom 1</th>
-                <th class="p-2">Kolom 2</th>
-              </tr>
-            </thead> -->
             <tbody>
               <tr>
                 <td class="p-2 align-top">Rilis</td>
