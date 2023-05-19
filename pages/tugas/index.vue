@@ -50,14 +50,9 @@
 </template>
   
 <script>
-import card from "~/components/card.vue";
-
 const pi = 3.14
 
 export default {
-  components: {
-    card,
-  },
   data() {
     return {
       luas: 0,
@@ -117,9 +112,8 @@ export default {
   },
   methods: {
     hitung(jari) {
-      this.luas = pi * jari * jari
-      this.keliling = 2 * pi * jari
-      console.log(this.hasil)
+      this.luas = (pi * jari * jari).toFixed(2)
+      this.keliling = (2 * pi * jari).toFixed(2)
     }
   },
 };

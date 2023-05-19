@@ -68,12 +68,7 @@
 </template>
 
 <script>
-import card from "~/components/card.vue";
-
 export default {
-  components: {
-    card,
-  },
   data() {
     return {
       films: [],
@@ -97,14 +92,7 @@ export default {
 </script>
 
 <script setup>
-
-definePageMeta({
-  layouts: "default",
-});
-
 onMounted(() => {
-
-  // Hamburger
   const hamburger = document.querySelector("#hamburger");
   const navMenu = document.querySelector("#nav-menu");
 
@@ -114,10 +102,8 @@ onMounted(() => {
   });
 
   var counterContainer = document.querySelector("#website-counter");
-  // var resetButton = document.querySelector("#reset");
   var visitCount = localStorage.getItem("page_view");
 
-  // Periksa apakah entri page_view ada
   if (visitCount) {
     visitCount = Number(visitCount) + 1;
     localStorage.setItem("page_view", visitCount);
