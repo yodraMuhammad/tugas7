@@ -49,22 +49,6 @@
   </section>
   <!-- End Card -->
   
-  <!-- Reverse Card -->
-  <section id="card" class="mb-30 pb-35">
-    <div class="container">
-      <hr class="mb-10">
-      <h1 class="text-4xl text-center font-bold mb-6">Penggunan Reverse Array</h1>
-      <div class="flex flex-wrap">
-        <div class="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/1 mb-10" v-for="data in datas.products.reverse()" :key="data.id">
-          <nuxt-link :to="'/tugas/detail/' + data.id">
-            <card class="card" :title="data.nama" :tahun="data.detail.rating" :description="'Rp ' + data.harga.toLocaleString()"
-              :image="data.image" :id="'/tugas/detail/' + data.id" />
-          </nuxt-link>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Card -->
 </template>
   
 <script>
