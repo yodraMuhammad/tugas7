@@ -19,8 +19,8 @@
             Hitung
           </button>
           <br>
-          <p v-show="hasil">Luas Lingkaran : <strong>{{ luas }}</strong></p>
-          <p v-show="hasil">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
+          <p v-show="luas">Luas Lingkaran : <strong>{{ luas }}</strong></p>
+          <p v-show="luas">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
           <br>
           <br>
           <a href="/db.json"
