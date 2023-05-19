@@ -1,8 +1,5 @@
 <script setup>
 const route = useRoute();
-console.log("succes");
-console.log(route.params.id - 1);
-
 const products = [
   {
     id: 1,
@@ -54,7 +51,6 @@ const products = [
 ];
 
 const product = products[route.params.id - 1];
-console.log(product);
 </script>
 
 <template>

@@ -60,7 +60,7 @@ export default {
   },
   data() {
     return {
-      luas: '',
+      luas: 0,
       keliling: 0,
       datas: {
         "products": [
@@ -127,13 +127,7 @@ export default {
   
 <script setup>
 
-definePageMeta({
-  layouts: "default",
-});
-
-
 onMounted(() => {
-
   const hamburger = document.querySelector("#hamburger");
   const navMenu = document.querySelector("#nav-menu");
 
