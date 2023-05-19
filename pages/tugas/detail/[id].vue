@@ -67,7 +67,7 @@ const product = products[route.params.id - 1];
               <tr>
                 <td class="p-2 align-top">Harga</td>
                 <td class="p-2 align-top">:</td>
-                <td class="p-2 align-top">Rp. {{ product.harga }}</td>
+                <td class="p-2 align-top">Rp. {{ product.harga.toLocaleString() }}</td>
               </tr>
               <tr>
                 <td class="p-2 align-top">Rating</td>
