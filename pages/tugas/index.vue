@@ -50,7 +50,7 @@
   <!-- End Card -->
   
   <!-- Reverse Card -->
-  <section id="card" class="mb-30 pb-35">
+  <!-- <section id="card" class="mb-30 pb-35">
     <div class="container">
       <hr class="mb-10">
       <h1 class="text-4xl text-center font-bold mb-6">Penggunan Reverse Array</h1>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- End Card -->
 </template>
   
