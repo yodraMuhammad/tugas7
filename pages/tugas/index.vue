@@ -58,12 +58,12 @@
   
 <script>
 const pi = 3.14
-
 export default {
   data() {
     return {
       luas: 0,
       keliling: 0,
+      jsonData: null,
       datas: {
         "products": [
           {
@@ -114,8 +114,13 @@ export default {
             },
           },
         ]
-      }, 
+      },
     };
+  },
+  async fetch() {
+    const response = await this.$fetch('/db.json');
+    this.jsonData = await response.json();
+    console.log(this.jsonData);
   },
   methods: {
     hitung(jari) {
@@ -130,6 +135,9 @@ export default {
 </script>
   
 <script setup>
+let { data, refresh } = await useFetch("/db.json")
+console.log(data);
+console.log(refresh);
 
 onMounted(() => {
   const hamburger = document.querySelector("#hamburger");

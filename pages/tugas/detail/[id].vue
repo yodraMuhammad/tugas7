@@ -67,7 +67,8 @@ const product = products[route.params.id - 1];
               <tr>
                 <td class="p-2 align-top">Harga</td>
                 <td class="p-2 align-top">:</td>
-                <td class="p-2 align-top">Rp. {{ product.harga.toLocaleString() }}</td>
+                <td class="p-2 align-top" v-if="product.discont"><del>Rp. {{ product.harga.toLocaleString() }}</del> Rp. {{ (product.harga - (product.harga*product.discont)).toLocaleString() }}</td>
+                <td class="p-2 align-top" v-else>Rp. {{ product.harga.toLocaleString() }}</td>
               </tr>
               <tr>
                 <td class="p-2 align-top">Rating</td>
