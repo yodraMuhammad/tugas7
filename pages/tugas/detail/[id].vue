@@ -67,18 +67,22 @@ const product = products[route.params.id - 1];
               <tr>
                 <td class="p-2 align-top">Harga</td>
                 <td class="p-2 align-top">:</td>
-                <td class="p-2 align-top" v-if="product.discont"><del>Rp. {{ product.harga.toLocaleString() }}</del> Rp. {{ (product.harga - (product.harga*product.discont)).toLocaleString() }}</td>
+                <td class="p-2 align-top" v-if="product.discont">
+                  <del>Rp. {{ product.harga.toLocaleString() }}</del>
+                  <strong> 
+                    Rp. {{ (product.harga - (product.harga * product.discont)).toLocaleString() }} 
+                  </strong>
+                  <span class="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200
+                    dark:text-red-800 ml-3">
+                    - {{ Math.round(product.discont * 100) + '%' }}
+                  </span>
+                  </td>
                 <td class="p-2 align-top" v-else>Rp. {{ product.harga.toLocaleString() }}</td>
               </tr>
               <tr>
                 <td class="p-2 align-top">Rating</td>
                 <td class="p-2 align-top">:</td>
                 <td class="p-2 align-top">{{ product.detail.rating }}</td>
-              </tr>
-              <tr>
-                <td class="p-2 align-top">Deskripsi</td>
-                <td class="p-2 align-top">:</td>
-                <td class="p-2 align-top">{{ product.deskriksi }}</td>
               </tr>
               <tr>
                 <td class="p-2 align-top">Stok</td>
@@ -89,6 +93,11 @@ const product = products[route.params.id - 1];
                 <td class="p-2 align-top">Terjual</td>
                 <td class="p-2 align-top">:</td>
                 <td class="p-2 align-top">{{ product.detail.terjual }} pcs</td>
+              </tr>
+              <tr>
+                <td class="p-2 align-top">Deskripsi</td>
+                <td class="p-2 align-top">:</td>
+                <td class="p-2 align-top">{{ product.deskriksi }}</td>
               </tr>
               <tr>
                 <td class="p-2 align-top">komentar</td>
@@ -118,5 +127,4 @@ const product = products[route.params.id - 1];
         </div>
       </div>
     </div>
-  </section>
-</template>
+  </section></template>

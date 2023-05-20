@@ -13,9 +13,14 @@ module.exports = {
       center: true,
       padding: '16px',
     },
-    extend: {},
-    screen: {
-      '2xl': '1320px',
+    extend: {
+      colors: {
+        dark: '#0f172a',
+        secondary: '#64748b'
+      },
+      screen: {
+        '2xl': '1320px',
+      },
     },
   },
   plugins: [],
