@@ -28,9 +28,8 @@
           <p>array 2</p>
           <p>{{ huruf }}</p>
           <br>
-          <p>join array 1 menggunakan ";"</p>
+          <p>Join array 1 menggunakan ";"</p>
           <p>{{join}}</p>
-          <br>
           <br>
           <p>Concat array 1 dan array2</p>
           <p>{{concat}}</p>
