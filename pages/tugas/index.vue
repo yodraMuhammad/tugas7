@@ -22,6 +22,25 @@
           <p v-show="luas">Luas Lingkaran : <strong>{{ luas }}</strong></p>
           <p v-show="keliling">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
           <br>
+          <p>array 1</p>
+          <p>{{ angka }}</p>
+          <br>
+          <p>array 2</p>
+          <p>{{ huruf }}</p>
+          <br>
+          <p>join menggunakan ";"</p>
+          <p>{{join}}</p>
+          <br>
+          <br>
+          <p>Concat array 1 dan array2</p>
+          <p>{{concat}}</p>
+          <br>
+          <p>Push '{{angka.push(6)}}' pada array 1</p>
+          <p>{{ angka }}</p>
+          <br>
+          <p>Pop '{{angka.pop(6)}}' pada array 1</p>
+          <p>{{ angka }}</p>
+          <br>
           <br>
           <a href="/db.json"
             class=" mt-10 w-1/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -58,6 +77,11 @@
   
 <script>
 const pi = 3.14
+let angka = [1,2,3,4,5]
+let huruf = ['a','b','c','d','e']
+let join = angka.join(';')
+let concat = huruf.concat(angka)
+
 export default {
   data() {
     return {
