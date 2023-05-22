@@ -28,7 +28,7 @@
           <p>array 2</p>
           <p>{{ huruf }}</p>
           <br>
-          <p>join menggunakan ";"</p>
+          <p>join array 1 menggunakan ";"</p>
           <p>{{join}}</p>
           <br>
           <br>
@@ -58,7 +58,7 @@
       <hr class="mb-10">
       <div class="flex justify-center items-center">
         <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md ml-2 mb-6" @click="rev">
-          Reverse
+          Reverse Array
         </button>
       </div>
       <div class="flex flex-wrap">
