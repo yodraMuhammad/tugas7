@@ -28,8 +28,8 @@
   <!-- card -->
   <section id="card" class="mb-30 pb-35">
     <div class="container">
-      <hr class="mb-10">
-      <div class="mb-10">
+      <hr class="mb-20">
+      <div class="mb-10" v-show="response">
         <p class="text-center text-1xl text-red-600">{{ response }}</p>
       </div>
       <div class="flex flex-wrap">

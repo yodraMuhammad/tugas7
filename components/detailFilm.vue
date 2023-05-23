@@ -1,12 +1,14 @@
 <script setup>
 
-const route = useRoute();
+const props = defineProps({
+    uid : String
+})
+
 const { data: film } = await useFetch(
-  "https://www.omdbapi.com/?apiKey=41243417&i=" + route.params.id
+  "https://www.omdbapi.com/?apiKey=41243417&i=" + props.uid
 );
 
-const { data } = await useAsyncData('count', () => $fetch("https://www.omdbapi.com/?apiKey=41243417&i=" + route.params.id))
-console.log(data._rawValue)
+
 </script>
 
 <template>
@@ -72,5 +74,3 @@ console.log(data._rawValue)
     </div>
   </section>
 </template>
-
-

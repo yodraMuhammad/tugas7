@@ -127,4 +127,5 @@ const product = products[route.params.id - 1];
         </div>
       </div>
     </div>
-  </section></template>
+  </section>
+</template>
