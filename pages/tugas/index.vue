@@ -56,10 +56,6 @@
   
 <script>
 const pi = 3.14
-let angka = [1,2,3,4,5]
-let huruf = ['a','b','c','d','e']
-let join = angka.join(';')
-let concat = huruf.concat(angka)
 
 export default {
   data() {

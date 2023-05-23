@@ -28,7 +28,10 @@
   <!-- card -->
   <section id="card" class="mb-30 pb-35">
     <div class="container">
-      <hr class="mb-20">
+      <hr class="mb-10">
+      <div class="mb-10">
+        <p class="text-center text-1xl text-red-600">{{ response }}</p>
+      </div>
       <div class="flex flex-wrap">
         <div class="w-full px-4 lg:w-1/4 md:w-1/2 sm:w-1/1 mb-10" v-for="data in datas" :key="data.id">
           <nuxt-link :to="'/search/detail/' + data.imdbID">
@@ -47,7 +50,7 @@ export default {
     return {
       films: [],
       datas: {},
-      input: "",
+      response: "",
     };
   },
   methods: {
@@ -58,7 +61,14 @@ export default {
       const { data: film } = await useFetch(
         "https://www.omdbapi.com/?apiKey=41243417&s=" + input
       );
-      this.datas = film._rawValue.Search;
+      if(film._rawValue.Response == 'True'){
+        this.datas = film._rawValue.Search;
+        this.response = '';
+      }else{
+        this.response = film._rawValue.Error;
+        this.datas = {};
+      }
+      console.log(film);
     },
   },
 };
