@@ -3,8 +3,8 @@
         <div class="container mt-30 mt-44 mb-44">
             <div class="flex flex-wrap mt-30 mb-30">
                 <div class="w-full self-center px-4 lg:w-1/2 md:w-1/2 sm:w-1/1 mb-10">
-                    <h1 class="text-6xl mb-4 font-bold">Tugas 7</h1>
-                    <h2 class="text-2xl mb-4">Link tugas ke tujuh : </h2>
+                    <h1 class="text-6xl mb-4 font-bold">Tugas</h1>
+                    <h2 class="text-2xl mb-4">Link tugas ke 9 : </h2>
                     <nuxt-link to="/tugas"
                         class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
                         Go

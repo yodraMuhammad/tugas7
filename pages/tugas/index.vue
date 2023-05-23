@@ -4,9 +4,7 @@
     <div class="container">
       <div class="flex justify-center items-center text-center ">
         <div class="w-full self-center px-4 lg:w-1/2 mb-10">
-          <h1 class="text-base font-semibold text-primary md:text-xl lg:text-2xl">
-            Tugas 7
-            <span class="block font-bold text-dark mb-2 text-4xl mt-1 lg:text-5xl">Mebuat Json</span>
+          <h1 class="block font-bold text-dark mb-2 text-4xl mt-1 lg:text-5xl">Mebuat Json
           </h1>
           <p class="font-medium text-secondary mb-4 mt-10 leadinng-relaxed">
             Const phi = {{ pi }}
@@ -21,24 +19,6 @@
           <br>
           <p v-show="luas">Luas Lingkaran : <strong>{{ luas }}</strong></p>
           <p v-show="keliling">Keliling Lingkaran : <strong>{{ keliling }}</strong></p>
-          <br>
-          <p>array 1</p>
-          <p>{{ angka }}</p>
-          <br>
-          <p>array 2</p>
-          <p>{{ huruf }}</p>
-          <br>
-          <p>Join array 1 menggunakan ";"</p>
-          <p>{{join}}</p>
-          <br>
-          <p>Concat array 1 dan array2</p>
-          <p>{{concat}}</p>
-          <br>
-          <p>Push '{{angka.push(6)}}' pada array 1</p>
-          <p>{{ angka }}</p>
-          <br>
-          <p>Pop '{{angka.pop(6)}}' pada array 1</p>
-          <p>{{ angka }}</p>
           <br>
           <br>
           <a href="/db.json"

@@ -6,11 +6,6 @@
                 <div class="flex items-center justify-between relative">
                     <nuxt-link to="/">
                         <div class="px-4 flex">
-                            <!-- <client-only class="max-w-full mx-auto">
-                                <Vue3Lottie class="max-w-full mx-auto"
-                                    animationLink="https://assets7.lottiefiles.com/private_files/lf30_rcfol5ub.json"
-                                    :height="0" :width="0" :speed="0.8" style="width: 50px; height: 50px" />
-                            </client-only> -->
                             <p class="font-bold text-xl text-primary block py-5 px-4">CariFilm.id</p>
                         </div>
                     </nuxt-link>
@@ -33,7 +28,7 @@
                                 </li>
                                 <li class="group">
                                     <nuxt-link to="/tugas"
-                                        class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tugas 7</nuxt-link>
+                                        class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tugas 9</nuxt-link>
                                 </li>
                             </ul>
                         </nav>
