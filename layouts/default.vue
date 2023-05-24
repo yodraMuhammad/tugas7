@@ -28,7 +28,11 @@
                                 </li>
                                 <li class="group">
                                     <nuxt-link to="/tugas"
-                                        class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tugas 9</nuxt-link>
+                                        class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Day 9</nuxt-link>
+                                </li>
+                                <li class="group">
+                                    <nuxt-link to="/day10"
+                                        class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Day 10</nuxt-link>
                                 </li>
                             </ul>
                         </nav>
@@ -72,3 +76,28 @@
         <!-- End Footer  -->
     </div>
 </template>
+
+<script setup>
+onMounted(() => {
+  const hamburger = document.querySelector("#hamburger");
+  const navMenu = document.querySelector("#nav-menu");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("hamburger-active");
+    navMenu.classList.toggle("hidden");
+  });
+
+  var counterContainer = document.querySelector("#website-counter");
+  var visitCount = localStorage.getItem("page_view");
+
+  if (visitCount) {
+    visitCount = Number(visitCount) + 1;
+    localStorage.setItem("page_view", visitCount);
+  } else {
+    visitCount = 1;
+    localStorage.setItem("page_view", 1);
+  }
+  counterContainer.innerHTML = visitCount;
+});
+
+</script>
