@@ -20,12 +20,10 @@
             <hr class="mb-10" />
             <div class="mb-10">
                 <h1 class="text-base mb-3 font-semibold text-primary md:text-xl lg:text-2xl">Soal 1</h1>
-                <div class="flex justify-center items-center text-center">
-
                     <input type="text"
                         class="border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-blue-300"
                         placeholder="Masukan Text" v-model="input" @keyup.enter="ubahString(input)" />
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-md ml-2"
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-md ml-1"
                         @click="ubahString(input)">
                         Submit
                     </button>
@@ -34,7 +32,6 @@
                     type="button" @click="reset2()">
                     Reset
                 </button>
-                </div>
                 <p class="text-xl font-semibold mt-3">Hasil : {{ output }}</p>
             </div>
             <hr class="mb-10" />
@@ -90,9 +87,10 @@
                 <h1 class="text-base text-center mb-3 font-semibold text-primary md:text-xl lg:text-2xl">Soal 3</h1>
                 <input type="text"
                     class="border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-blue-300"
-                    placeholder="Masukan Angka..." v-model="input2" @keyup.enter="getRunningSum(input2)"
-                    @keyup="handleInputChange" />
-                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-md ml-2"
+                    placeholder="Masukan Angka" v-model="input2" @keyup.enter="getRunningSum(input2)"
+                    @keyup="handleInputChange" 
+                    @keyup.backspace="hapus()" />
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-md ml-1"
                     @click="getRunningSum(input2)">
                     Submit
                 </button>
@@ -141,18 +139,14 @@ export default {
                     uniqueObjects.push(obj);
                 }
             });
-
             uniqueObjects.sort((a, b) => a.name.localeCompare(b.name));
-
             return uniqueObjects;
         },
         handleInputChange() {
             const lastChar = this.input2.slice(-1);
-
             if (/^[0-9]$/.test(lastChar)) {
                 this.input2 += ",";
             }
-            console.log(this.input2);
         },
         getRunningSum(input) {
             let sum = 0;
@@ -163,7 +157,6 @@ export default {
                 sum += num;
                 return sum;
             });
-            console.log(outputArray);
             this.output2 = outputArray;
         },
         reset() {
@@ -173,9 +166,16 @@ export default {
         reset2() {
             this.input = '';
             this.output = '';
-        }
-    },
-};
+        },
+        hapus(){
+            if (this.input2.length >= 2) {
+                const newValue = this.input2.slice(0, -2);
+                this.input2 = newValue;
+            }
+        },
+    }
+}
+
 </script>
 
 <script setup>

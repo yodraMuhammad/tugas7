@@ -6,7 +6,7 @@
                 <div class="flex items-center justify-between relative">
                     <nuxt-link to="/">
                         <div class="px-4 flex">
-                            <p class="font-bold text-xl text-primary block py-5 px-4">CariFilm.id</p>
+                            <p class="font-bold text-xl text-primary block py-5 px-4">BootCamp.id</p>
                         </div>
                     </nuxt-link>
                     <div class="flex items-center px-4">
