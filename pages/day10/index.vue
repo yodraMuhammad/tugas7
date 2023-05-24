@@ -168,9 +168,23 @@ export default {
             this.output = '';
         },
         hapus(){
-            if (this.input2.length >= 2) {
-                const newValue = this.input2.slice(0, -2);
-                this.input2 = newValue;
+             // Cari posisi karakter koma terakhir (",") dalam string
+            const lastIndex = this.input2.lastIndexOf(',');
+            const commaCount = this.input2.split(",").length - 1;
+
+            // Jika karakter koma terakhir ditemukan, hapus satu angka sebelumnya
+            if(commaCount>1){
+
+                if (lastIndex !== -1) {
+                    const subStr = this.input2.slice(0, lastIndex);
+                    const secondLastIndex = subStr.lastIndexOf(',');
+                    if (secondLastIndex !== -1) {
+                        this.input2 = subStr.slice(0, secondLastIndex + 1) + this.input2.slice(lastIndex + 1);
+                        console.log(this.input2); // Output: "1,2,3,12,12,"
+                    }
+                }
+            } else {
+                this.input2 = '';
             }
         },
     }
